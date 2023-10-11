@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
+    <title>QD's Hotel & Resort</title>
+    <style>
+        /* css reset */
+        body{
+            font-family: 'Oswald', sans-serif;
+            margin: 0px;
+            padding: 0px;
+            background: url('img/bg3.jpg');
+            background-repeat:no-repeat;
+            backdrop-filter:blur(2px);
+            background-size: cover;
+            height: 1000px; 
+            color: #fff;
+            /* overflow: auto; */
+        }
+
+        .left{
+            /* border: 2px solid red; */
+            display: inline-block;
+            margin-right: 25px;
+            left: 30px;
+            top: 10px;
+            position: absolute;
+        }
+
+        .left img{
+            mix-blend-mode: multiply;
+            width: 200px;
+            filter: invert(100%);
+
+        }
+
+        .left div{
+            font-weight: bold;
+            text-align: center;
+            line-height: 1em;
+            font-size: 20px;
+            color: rgb(255, 255, 255);
+        }
+
+        .mid{
+            /* border: 2px solid rgb(17, 192, 32); */
+            display: block;
+            width: 33%;
+            margin: 20px auto;
+        }
+
+        .right{
+            /* border: 2px solid rgb(251, 255, 0); */
+            display: inline-block;
+            right: 14px;
+            top: 20px;
+            position: absolute; /*Relative to parent set hogaya right par or parent header hae*/
+        }
+
+        .navbar{
+            display: inline-block;
+        }
+
+        .navbar li{
+            display: inline-block;
+            font-size: 15px;
+        }
+
+        .navbar li a{
+            font-weight: bold;
+            font-size: 20px;
+            color: rgb(2, 2, 2);
+            text-decoration: none;
+            padding: 30px 23px; 
+        }
+
+        .navbar li a:hover, .navbar li a.active{
+            background-color: rgb(182, 233, 240);
+            padding: 12px;
+        }
+        .search{
+            font-family: 'Oswald', sans-serif;
+            margin: 7px 15px;
+            padding: 4px 14px;
+            border: 2px solid rgb(47, 174, 206);
+            border-radius: 07px;
+            font-size: 15px;
+            
+        }
+
+        .search:hover{
+            cursor: pointer;
+        }
+
+        .container{
+            border: 2px solid black;
+            margin: 100px auto;
+            /* padding: 100px 60px; */
+            padding-top: 30px;
+            padding-bottom: 120px;
+            padding-left: 40px;
+            padding-right: 40px;
+            width: 33%;
+            display: block;
+            border-radius: 28px;
+            border-color: #fff;
+        }
+
+        .label{
+            color: black;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .form input{
+            font-family: 'Oswald', sans-serif;
+            padding: 9px;
+            font-size: 15px;
+            display: block;
+            width: 50%;
+            margin:5px;
+            border-radius: 5px;
+            border-color: rgb(15, 193, 247);
+        }
+
+
+        .container .btn{
+            font-family: 'Oswald', sans-serif;
+            font-weight: bold;
+            float: left;
+            padding: 10px;
+            font-size: 12px;
+            /* display:inline-block; */
+            width: 57%;
+            margin: 25px auto;
+            border-radius: 5px;
+            border-color: rgb(15, 193, 247);
+            background-color: #fff;
+        }
+
+        .container h1{
+            text-align: center;
+            font-weight: bold;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <!-- Left for logo -->
+        <div class="left">
+            <!-- I am left -->
+            <img src="img/westlogo.png" alt="">
+            <!-- <div>QD's Hotel & Resort</div> -->
+        </div>
+        <!-- Mid for Navbar -->
+        <div class="mid">
+            <!-- I am Mid -->
+            <ul class="navbar">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Rooms</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+        <!-- Right for search -->
+        <div class="right">
+            <!-- I am Right -->
+            <input type="text" class="search" placeholder="Search Here">
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- container -->
+        <h1>BOOK NOW!</h1>
+        <form action="noaction.py">
+            <div class="form">
+                <label for="" class="label">Name</label>
+                <input type="text" placeholder="Enter Your Name"> 
+            </div>
+            <div class="form">
+                <label for="" class="label">Contact</label>
+                <input type="text" placeholder="+92-3112786142"> 
+            </div>
+            <div class="form">
+                <label for="" class="label">Email</label>
+                <input type="text" placeholder="Email"> 
+            </div>
+            <div class="form">
+                <label for="" class="label">Rooms</label>
+                <input type="text" placeholder="No. of Rooms"> 
+            </div>
+            <button class="btn">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
